@@ -1,0 +1,58 @@
+
+
+
+<app-search-flight-by-city></app-search-flight-by-city>
+
+
+
+
+<html lang="en" class="h-100">
+    <body class="h-100">
+    
+        <div class="container h-100">  
+        <div class="row h-200 justify-content-center align-items-center">   
+        <div class="col-20 col-md-4 col-lg-4">
+    
+    <h2> Search Flight & Fill Details</h2>
+    <br>
+									
+    <div class="col-md-6 col-md-offset-2">												
+      <!-- <h2>Payment  :</h2>	 -->
+      <label for="userName">User Name:</label>
+            <input type="text" [(ngModel)]="userName" size="20"/>						
+      <br/>												
+      <form [formGroup]="addForm" (ngSubmit)="onSubmit()">		
+                            
+        <div class="form-group">												
+          <label for="bookingDate">Booking Date</label>												
+          <input type="date" formControlName="bookingDate" placeholder="Booking Date" name="bookingDate" class="form-control" id="bookingDate">												
+          <div *ngIf="submitted && addForm.controls.bookingDate.errors" class="error">												
+              <div class="text-danger" *ngIf="addForm.controls.bookingDate.errors.required">Booking Date required</div>												
+            </div>												
+        </div>												
+                                                    
+        <div class="form-group">												
+          <label for="flightId">Flight Id</label>												
+          <input type="text" formControlName="flightId" placeholder="Flight Id" name="flightId" class="form-control" id="flightId">												
+          <div *ngIf="submitted && addForm.controls.flightId.errors" class="error">												
+              <div class="text-danger" *ngIf="addForm.controls.flightId.errors.required">Flight Id</div>												
+            </div>												
+        </div>		
+        	<br>
+                                                                                                  
+        <button class="btn btn-success">Add Passengers</button>&nbsp; &nbsp;												
+                                              
+                                                    
+        <br/><br/>												
+      </form>												
+    </div>
+
+       
+    
+    </div>
+    </div>
+    </div>
+    
+    </body>
+    </html>
+    

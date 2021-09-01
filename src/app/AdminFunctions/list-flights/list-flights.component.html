@@ -1,0 +1,30 @@
+<h3 class="p-3 text-center">List of Flights</h3>
+<div class="container">
+    <table class="table table-striped table-bordered">
+        <thead>
+            <tr>
+                <th>FlightId</th>
+                <th>Departure Date</th>
+                <th>Return Date</th> 
+                <th>To City</th> 
+                <th>From City</th> 
+                <th>No Of Seats</th> 
+                <th>Economoy Class Fare</th> 
+                <th>Business Class Fare</th>                   
+            </tr>
+        </thead>
+        <tbody>
+              <tr *ngFor="let f of flightsList;">              
+                <td> {{f.flightId}} </td>
+                <td> {{f.departureDate}} </td>
+                <td> {{f.returnDate}} </td>     
+                <td> {{f.toCity}} </td>
+                <td> {{f.fromCity}} </td>
+                <td> {{f.noOfSeats}} </td>  
+                <td> {{f.economyClassFare}} </td>
+                <td> {{f.businessClassFare}} </td>                        
+               
+            </tr>
+        </tbody>
+    </table>
+</div>

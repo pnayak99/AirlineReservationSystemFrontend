@@ -1,0 +1,70 @@
+<html lang="en" class="h-100">
+<body class="h-100">
+
+    <div class="container h-100">  
+    <div class="row h-200 justify-content-center align-items-center">   
+    <div class="col-20 col-md-4 col-lg-4">
+<h3>Welcome Admin</h3>
+
+<h4>Add New Flight</h4>
+
+<div  style= "align-content:center;" >
+    <div [hidden]="submitted" style="width: 400px;">
+        <form (ngSubmit)="onSubmit()">
+    
+            <div class="form-group">
+                <label for="name">Flight Id</label>
+                <input type="text" class="form-control" id="flightId" required [(ngModel)]="flight.flightId" name="flightId">
+            </div>
+    
+            <div class="form-group">
+                <label for="name">Departure Date</label>
+                <input type="date" class="form-control" id="departureDate" required [(ngModel)]="flight.departureDate" name="departureDate">
+            </div>
+    
+            <div class="form-group">
+                <label for="name">Return Date</label>
+                <input type="date" class="form-control" id="returnDate" required [(ngModel)]="flight.returnDate" name="returnDate">
+            </div>       
+    
+            <div class="form-group">
+                <label for="name">To City</label>
+                <input type="text" class="form-control" id="toCity" required [(ngModel)]="flight.toCity" name="toCity">
+            </div>    
+    
+            <div class="form-group">
+                <label for="name">From City</label>
+                <input type="text" class="form-control" id="fromCity" required [(ngModel)]="flight.fromCity" name="fromCity">
+            </div>    
+    
+            <div class="form-group">
+                <label for="name">Number of Seats</label>
+                <input type="number" class="form-control" id="noOfSeats" required [(ngModel)]="flight.noOfSeats" name="noOfSeats">
+            </div>    
+    
+            <div class="form-group">
+                <label for="name">Economy Class Fare</label>
+                <input type="number" class="form-control" id="economyClassFare" required [(ngModel)]="flight.economyClassFare" name="economyClassFare">
+            </div> 
+            
+            <div class="form-group">
+                <label for="name">Business Class Fare</label>
+                <input type="number" class="form-control" id="businessClassFare" required [(ngModel)]="flight.businessClassFare" name="businessClassFare">
+            </div> 
+            <br>  
+    
+                <button type="submit" class="btn btn-success">Submit</button> 
+        </form>
+        	
+    </div>
+    <button class="btn btn-info" (click)="goBack()">Back To Admin Login</button>
+    <div [hidden]="!submitted">
+        <h5>You submitted successfully!</h5>
+    </div>
+    </div>
+</div>
+</div>
+</div>
+
+</body>
+</html>

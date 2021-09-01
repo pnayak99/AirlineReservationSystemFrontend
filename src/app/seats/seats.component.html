@@ -1,0 +1,87 @@
+
+
+<body>
+  
+
+   <div [ngClass]="{container:1}" >
+
+  <div class="info">
+  Your selection : <button class="blue"> </button> <br>
+   Available seats : <button class="green"></button> <br>
+
+  </div>
+
+  <div class="container-fluid">
+      <h3>Book Seats</h3>
+      <h4 style="color:blue;">Economy Class</h4>
+      <div class="business">
+          <div class="col1">
+           <div class="button_row">
+               <button [ngClass]="{blue:new[1],green:!new[1],red:old[1]}" (click)="changeEco(1)">A1</button> 
+              <button [ngClass]="{blue:new[2],green:!new[2],red:old[2]}" (click)="changeEco(2)">A2</button> 
+              <button [ngClass]="{blue:new[3],green:!new[3],red:old[3]}" (click)="changeEco(3)">A3</button>  <br>
+           </div>
+           <div class="button_row">
+            
+              <button [ngClass]="{blue:new[4],green:!new[4],red:old[4]}" (click)="changeEco(4)">B1</button>
+              <button [ngClass]="{blue:new[5],green:!new[5],red:old[5]}" (click)="changeEco(5)">B2</button>
+              <button [ngClass]="{blue:new[6],green:!new[6],red:old[6]}" (click)="changeEco(6)">B3</button> <br>
+           </div>  
+           <div class="button_row">
+            
+            <button [ngClass]="{blue:new[7],green:!new[7],red:old[7]}" (click)="changeEco(7)">C1</button>
+            <button [ngClass]="{blue:new[8],green:!new[8],red:old[8]}" (click)="changeEco(8)">C2</button>
+            <button [ngClass]="{blue:new[9],green:!new[9],red:old[9]}" (click)="changeEco(9)">C3</button> <br>
+         </div> 
+
+         <div class="button_row">
+            
+          <button [ngClass]="{blue:new[10],green:!new[10],red:old[10]}" (click)="changeEco(10)">D1</button>
+          <button [ngClass]="{blue:new[11],green:!new[11],red:old[11]}" (click)="changeEco(11)">D2</button>
+          <button [ngClass]="{blue:new[12],green:!new[12],red:old[12]}" (click)="changeEco(12)">D3</button> <br>
+       </div> 
+        
+       <div class="button_row">
+            
+        <button [ngClass]="{blue:new[13],green:!new[13],red:old[13]}" (click)="changeEco(13)">E1</button>
+        <button [ngClass]="{blue:new[14],green:!new[14],red:old[14]}" (click)="changeEco(14)">E2</button>
+        <button [ngClass]="{blue:new[15],green:!new[15],red:old[15]}" (click)="changeEco(15)">E3</button> <br>
+     </div> 
+
+     <h4 style="color:blue;">Business Class</h4>
+
+     <div class="button_row">
+            
+      <button [ngClass]="{blue:new[16],green:!new[16],red:old[16]}" (click)="changeBusiness(16)">F1</button>
+      <button [ngClass]="{blue:new[17],green:!new[17],red:old[17]}" (click)="changeBusiness(17)">F2</button>
+      <button [ngClass]="{blue:new[18],green:!new[18],red:old[18]}" (click)="changeBusiness(18)">F3</button> <br>
+   </div> 
+
+   <div class="button_row">
+            
+    <button [ngClass]="{blue:new[19],green:!new[19],red:old[19]}" (click)="changeBusiness(19)">G1</button>
+    <button [ngClass]="{blue:new[20],green:!new[20],red:old[20]}" (click)="changeBusiness(20)">G2</button>
+    <button [ngClass]="{blue:new[21],green:!new[21],red:old[21]}" (click)="changeBusiness(21)">G3</button> <br>
+ </div> 
+
+ <div class="button_row">
+            
+  <button [ngClass]="{blue:new[22],green:!new[22],red:old[22]}" (click)="changeBusiness(22)">C1</button>
+  <button [ngClass]="{blue:new[23],green:!new[23],red:old[23]}" (click)="changeBusiness(23)">C2</button>
+  <button [ngClass]="{blue:new[24],green:!new[24],red:old[24]}" (click)="changeBusiness(24)">C3</button> <br>
+</div> 
+          </div>
+      </div>
+      <hr>
+      <b>Total cost-</b> {{current_cost}}
+      
+  </div>
+  <div>
+    <button type="button" class="btn btn-success " (click)="pay()">Pay</button>
+
+
+  </div>
+
+
+</div>
+</body>

@@ -1,0 +1,45 @@
+<html lang="en" class="h-100">
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  
+  <body class="h-100">
+  
+      <div class="container h-100">  
+      <div class="row h-200 justify-content-center align-items-center">   
+      <div class="col-20 col-md-4 col-lg-4">
+
+<h3 class = "text-center">Admin Login</h3>
+<div class="container">
+    <form #loginform="ngForm" (ngSubmit)="onSubmit()">
+        <small class="text-danger">{{msg}}</small>
+      <div class="form-group">
+        <label for="email">Username:</label>
+        <input type="email" class="form-control" placeholder="Enter Username" name="userName" [(ngModel)]="admin.userName"  #userName="ngModel" required
+         [class.is-invalid]="userName.invalid && userName.touched"
+        >
+        <small class="text-danger" [class.d-none]="userName.valid || userName.untouched">Username is required</small>
+      </div>
+      <div class="form-group">
+        <label for="pwd">Password:</label>
+        <input type="password" class="form-control" placeholder="Enter" name="password" [(ngModel)]="admin.password" #password="ngModel" required
+        [class.is-invalid]="password.invalid && userName.touched"
+        >
+        <small class="text-danger" [class.d-none]="password.valid || password.untouched">Password is required</small>
+      </div>
+      <div class="checkbox">
+        <label><input type="checkbox"> Remember me</label>
+      </div>
+      <button type="submit" class="btn btn-info">Login</button>
+    </form>
+    </div>
+
+  </div>
+</div>
+</div>
+
+</body>
+</html>

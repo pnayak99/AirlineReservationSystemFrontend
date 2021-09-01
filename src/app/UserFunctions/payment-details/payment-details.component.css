@@ -1,0 +1,9 @@
+body {
+ background-color:lightblue;
+   }
+
+   @media print {
+    button {
+      display: none;
+    }
+  }   
